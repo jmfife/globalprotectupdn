@@ -62,20 +62,25 @@ else
    # Process functional argument
    case $1 in
       up) #activate GP
-         if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak" ]]
+         # if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak" ]]
+         if ! launchctl list | grep pangps > /dev/null
          then
             echo "Re-Enabling Global Protect"
-            sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect
+            # sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect
+            launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*
          else
             echo "GP Already Enabled"
          fi
          exit;;
       dn) # deactivate GP
-         if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect" ]]
+         # if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect" ]]
+         if launchctl list | grep pangps > /dev/null
          then
             echo "Disabling Global Protect"
-            sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak
-            sudo kill $(pgrep GlobalProtect)
+            # sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak
+            # sudo kill $(pgrep GlobalProtect)
+            # sudo kill $(pgrep PanGPS)
+            launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*
          else
             echo "GP Already Disabled"
          fi
