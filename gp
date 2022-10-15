@@ -5,9 +5,7 @@
 # J. M. Fife
 # 2022-10-14
 
-#########################
-# The command line help #
-#########################
+# The command line help and usage
 Help() {
     Usage;
     echo
