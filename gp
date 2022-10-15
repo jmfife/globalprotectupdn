@@ -37,14 +37,6 @@ then
    fi
 else
 
-   # Call getopt to validate the provided input. 
-   # options=$(getopt h --long help)
-   # [ $? -eq 0 ] || { 
-   #     echo "Incorrect options provided"
-   #     exit 1
-   # }
-   # eval set -- "$options"
-
    # Get the options
    while getopts "h" option; do
       case $option in
