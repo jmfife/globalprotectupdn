@@ -18,8 +18,8 @@ Help() {
     echo "    -h       Display this help message"
     echo
     echo "Commands:"
-    echo "    up       Activate Global Protect"
-    echo "    dn       De-Activate Global Protect"
+    echo "    up       Re-Enable Global Protect"
+    echo "    dn       Disable Global Protect"
     echo
     echo "Example:"
     echo "    gp up"
@@ -33,9 +33,9 @@ if [ $# -eq 0 ]
 then
    if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect" ]]
    then
-      echo "GP Active"
+      echo "GP Enabled"
    else
-      echo "GP Inactive"
+      echo "GP Disabled"
    fi
 else
 
@@ -64,20 +64,20 @@ else
       up) #activate GP
          if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak" ]]
          then
-            echo "Activating Global Protect"
+            echo "Re-Enabling Global Protect"
             sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect
          else
-            echo "GP Already Active"
+            echo "GP Already Enabled"
          fi
          exit;;
       dn) # deactivate GP
          if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect" ]]
          then
-            echo "Deactivating Global Protect"
+            echo "Disable Global Protect"
             sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak
             sudo kill $(pgrep GlobalProtect)
          else
-            echo "GP Already Deactivated"
+            echo "GP Already Disabled"
          fi
          exit;;
       *) # Invalid option
