@@ -73,7 +73,7 @@ else
       dn) # deactivate GP
          if [[ -f "/Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect" ]]
          then
-            echo "Disable Global Protect"
+            echo "Disabling Global Protect"
             sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak
             sudo kill $(pgrep GlobalProtect)
          else
