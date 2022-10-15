@@ -4,7 +4,7 @@ A bash script for MacOS that can be used to disable and re-enable Global Protect
 
 ## Installation
 
-Clone this repo.  Note: probably global protect needs to be disabled
+Clone this repo.  Note: probably global protect needs to be disabled from the UI before you can access GitHub, which in itself dempostrates why this kind of command line tool is useful!
 
 ```bash
 git clone git@github.com:jmfife/globalprotectupdn.git
