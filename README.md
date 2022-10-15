@@ -1,6 +1,6 @@
 # Global Protect Up/Dn (gp)
 
-A bash script for MacOS that can deactivate and re-activate Global Protect.
+A bash script for MacOS that can be used to disable and re-enable Global Protect.  (Based on a solution from Lance Delarme.)
 
 ## Installation
 

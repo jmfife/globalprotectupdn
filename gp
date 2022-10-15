@@ -12,7 +12,7 @@ Help() {
     Usage;
     echo
     echo "Description:"
-    echo "    GlobalProtectUpDn activates and de-activates Global Protect on MacOS"
+    echo "    GlobalProtectUpDn can be used to disable and re-enable Global Protect on MacOS."
     echo
     echo "Options:"
     echo "    -h       Display this help message"
