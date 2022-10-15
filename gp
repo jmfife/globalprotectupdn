@@ -79,7 +79,6 @@ else
             echo "Disabling Global Protect"
             # sudo mv /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect /Applications/GlobalProtect.app/Contents/MacOS/GlobalProtect.bak
             # sudo kill $(pgrep GlobalProtect)
-            # sudo kill $(pgrep PanGPS)
             launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*
          else
             echo "GP Already Disabled"
