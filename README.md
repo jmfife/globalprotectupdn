@@ -15,14 +15,20 @@ Make sure you have a place to keep scripts that is in PATH, e.g. in `/Users/<use
 ```bash
 mkdir ~/bin
 echo "export PATH=\"\$HOME/bin:\$PATH\"" >> ~/.zshrc
-````
+```
 
 Install gp there. 
 
 ```bash
 cp globalprotectupdn/gp ~/bin
 chmod +x ~/bin/gp
-````
+```
+
+Now you can remove the Git repo if you like.
+
+```bash
+rm -rf globalprotectupdn
+```
 
 ## Usage:
 
