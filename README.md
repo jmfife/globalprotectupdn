@@ -47,6 +47,15 @@ gp [-h] [up|dn]
 
 ## Example:
 
-```bash
-gp up
-````
+```
+% gp
+GP Enabled
+% gp dn
+Disabling Global Protect
+% gp
+GP Disabled
+% gp up
+Re-Enabling Global Protect
+% gp
+GP Enabled
+```
