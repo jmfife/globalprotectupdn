@@ -49,7 +49,7 @@ else
       esac
    done
 
-   # Process functional argument
+   # Process command
    case $1 in
       up) #activate GP
          if ! launchctl list | grep pangps > /dev/null
