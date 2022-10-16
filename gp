@@ -31,9 +31,9 @@ if [ $# -eq 0 ]
 then
    if launchctl list | grep pangps > /dev/null
    then
-      echo "GP Enabled"
+      echo "Global Protect Enabled"
    else
-      echo "GP Disabled"
+      echo "Global Protect Disabled"
    fi
 else
 

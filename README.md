@@ -49,13 +49,13 @@ gp [-h] [up|dn]
 
 ```
 % gp
-GP Enabled
+Global Protect Enabled
 % gp dn
 Disabling Global Protect
 % gp
-GP Disabled
+Global Protect Disabled
 % gp up
 Re-Enabling Global Protect
 % gp
-GP Enabled
+Global Protect Enabled
 ```
