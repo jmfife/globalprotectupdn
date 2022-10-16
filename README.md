@@ -32,7 +32,7 @@ gp [-h] [up|dn]
 
 ## Options:
 
-     -h       Display this help message
+     -h       Display help message
 
 ## Commands:
 
