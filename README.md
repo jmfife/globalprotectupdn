@@ -21,7 +21,7 @@ Install gp there.
 
 ```bash
 cp globalprotectupdn/gp ~/bin
-chmod +x globalprotectupdn/gp
+chmod +x ~/bin/gp
 ````
 
 ## Usage:
