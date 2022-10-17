@@ -10,11 +10,12 @@ Clone this repo.  Note: probably global protect needs to be disabled from the UI
 git clone git@github.com:jmfife/globalprotectupdn.git
 ```
 
-Make sure you have a place to keep scripts that is in PATH, e.g. in `/Users/<user_id>/bin`.  If you don't have it already:
+Make sure you have a place to keep scripts that is in PATH, e.g. in `/Users/<user_id>/bin`.  If you don't have it already, do the following (assuming here you are running `zsh`).
 
 ```bash
 mkdir ~/bin
 echo "export PATH=\"\$HOME/bin:\$PATH\"" >> ~/.zshrc
+exec zsh
 ```
 
 Install gp there. 
